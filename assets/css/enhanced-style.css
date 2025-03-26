@@ -1,0 +1,268 @@
+/* GoZupees Affiliate Product Display Enhanced Plugin Styles */
+
+/* 1. Main container: fixed 360px height */
+.affiliate-product-container {
+    width: 100%;
+    max-width: 900px;
+    min-height: 360px; /* Changed from fixed height to min-height */
+    height: auto; /* Allow it to grow */
+    display: flex;
+    align-items: stretch;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    margin: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    overflow: visible !important;
+}
+
+/* New wrapper for the container */
+.affiliate-product-container-wrapper {
+    position: relative;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Bookmark icon styles */
+.affiliate-product-bookmark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 100; /* High z-index to appear above content */
+}
+
+.bookmark-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.bookmark-icon svg {
+    color: #ccc;
+    stroke-width: 2px;
+    transition: all 0.2s ease;
+}
+
+/* Hover and active states */
+.bookmark-icon:hover {
+    transform: scale(1.1);
+    background-color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.bookmark-icon:hover svg {
+    color: #ff4081;
+}
+
+.bookmark-icon.active svg {
+    color: #ff4081;
+    fill: #ff4081;
+}
+
+/* 2. Image section: 300px wide, 360px tall, no extra bars */
+/* Image section styles */
+.affiliate-product-image {
+    flex: 0 0 300px;
+    height: auto;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.affiliate-product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    flex-grow: 1;
+    transition: transform 0.3s ease;
+}
+
+/* Optional: zoom effect on hover */
+.affiliate-product-container:hover .affiliate-product-image img {
+    transform: scale(1.1);
+}
+
+/* 3. Details section: fill remaining width, scroll if content overflows */
+.affiliate-product-details {
+    flex: 1;
+    height: 100%;
+    padding: 20px 20px 20px 30px;
+    display: flex;
+    flex-direction: column;  /* Stack child elements vertically */
+    overflow-y: visible;        /* Changed from auto to visible */
+}
+
+/* 4. Text styling: brand, title, rating, etc. */
+.affiliate-product-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.affiliate-product-link:hover .affiliate-product-title {
+    color: #C7511F;
+    text-decoration: underline;
+}
+.affiliate-product-link:hover .affiliate-product-brand {
+    text-decoration: underline;
+}
+
+.affiliate-product-title-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between title and button */
+}
+
+.affiliate-product-brand {
+    font-size: 13px;
+    color: #0066c0;
+    margin: 0 0 7px 0;
+    padding: 0;
+    font-weight: normal;
+    line-height: 1;
+}
+
+.affiliate-product-header {
+    display: flex;
+    align-items: center;
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+.affiliate-product-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.3;
+}
+
+.inline-tag {
+    display: inline-block;
+}
+
+.affiliate-product-tag {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 12px;
+    padding: 2px 4px;
+    border-radius: 3px;
+    margin-left: 2px;
+    font-weight: normal;
+}
+
+.affiliate-product-weight {
+    font-weight: normal;
+    font-size: 14px;
+    color: #666;
+    margin-left: 8px;
+}
+
+.affiliate-product-rating {
+    margin: 4px 0 8px 0;
+    color: #FF9900;
+    display: flex;
+    align-items: center;
+}
+.affiliate-product-rating .star {
+    font-size: 16px;
+}
+.affiliate-product-rating .half-star,
+.affiliate-product-rating .empty-star {
+    opacity: 0.5;
+}
+.affiliate-product-rating-text {
+    color: #0066c0;
+    font-size: 12px;
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+.affiliate-product-description {
+    margin: 12px 0;
+    color: #555;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/* 5. Price and CTA */
+.affiliate-product-price-container {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+.affiliate-product-price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 12px;
+}
+.affiliate-product-compare-price {
+    font-size: 18px;
+    color: #777;
+    text-decoration: line-through;
+}
+.affiliate-product-cta {
+    margin-top: 10px;
+}
+.affiliate-product-button {
+    display: inline-block;
+    background-color: #ff4081;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.affiliate-product-button:hover {
+    background-color: #e03771;
+    color: white;
+}
+
+/* 6. Feature tags (e.g., "Made in USA", etc.) */
+.affiliate-product-features {
+    margin-top: 15px;        /* space above features so they're not stuck to the CTA */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.affiliate-product-feature-tag {
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+
+/* 7. Mobile layout */
+@media (max-width: 600px) {
+    .affiliate-product-container {
+        flex-direction: column;
+        height: auto; /* Let it expand on small screens (or keep 360px if you prefer) */
+    }
+    .affiliate-product-image {
+        width: 100%;
+        height: 200px; /* Adjust as desired for mobile */
+    }
+    .affiliate-product-title {
+        font-size: 18px;
+    }
+    .affiliate-product-price {
+        font-size: 20px;
+    }
+}

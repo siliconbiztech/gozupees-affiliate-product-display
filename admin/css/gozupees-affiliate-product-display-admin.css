@@ -1,0 +1,48 @@
+/**
+ * Admin styles for GoZupees Affiliate Product Display plugin
+ */
+.affiliate-product-meta-box {
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.affiliate-product-meta-box p {
+    margin: 0 0 15px;
+}
+
+.affiliate-product-meta-box p:last-child {
+    margin-bottom: 0;
+}
+
+.affiliate-product-meta-box label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.affiliate-product-meta-box input[type="text"],
+.affiliate-product-meta-box input[type="url"],
+.affiliate-product-meta-box input[type="number"],
+.affiliate-product-meta-box textarea {
+    width: 100%;
+    max-width: 100%;
+}
+
+.affiliate-product-meta-box .description {
+    font-style: italic;
+    color: #777;
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+.affiliate-product-meta-box .regular-text {
+    width: 25em;
+}
+
+.affiliate-product-meta-box .small-text {
+    width: 5em;
+}
